@@ -25,15 +25,6 @@
   </properties>
 
   <build>
-    <resources>
-      <!-- Additional resources to copy into target so the JAR plugin will pick them up -->
-      <resource>
-        <directory>src/main/resources</directory>
-      </resource>
-      <resource>
-        <directory>src/main/webapp</directory>
-      </resource>
-    </resources>
     <plugins>
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
@@ -65,8 +56,6 @@
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-war-plugin</artifactId>
         <configuration>
-          <attachClasses>true</attachClasses>
-          <classesClassifier>classes</classesClassifier>
           <archive>
               <manifestEntries>
                 <Implementation-Title>${project.name}</Implementation-Title>
